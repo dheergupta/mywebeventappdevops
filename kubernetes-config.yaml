@@ -11,10 +11,9 @@ spec:
     metadata:
       labels:
         app: mywebeventappdevops
-  spec:
-    containers:
-    - name: mywebeventappdevops
-      image: mywebeventappdevops/mywebeventappdevops:latest
-      ports:
-      - containerPort: 8080
-
+    spec:
+      containers:
+      - name: mywebeventappdevops
+        image: mywebeventappdevops/mywebeventappdevops:latest
+        ports:
+        - containerPort: 8080
