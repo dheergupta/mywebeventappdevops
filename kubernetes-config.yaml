@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: mywebeventappdevops
-        image: mywebeventappdevops/mywebeventappdevops:latest
+        image: gcr.io/mywebeventappdevops/mywebeventappdevops:latest
         ports:
         - containerPort: 8080
