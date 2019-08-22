@@ -4,6 +4,13 @@ metadata:
   name: mywebeventappdevops
 spec:
   replicas: 3
+  selector:
+    matchLabels:
+      app: mywebeventappdevops
+  template:
+    metadata:
+      labels:
+        app: mywebeventappdevops
   containers:
   - name: mywebeventappdevops
     image: mywebeventappdevops/mywebeventappdevops:latest
