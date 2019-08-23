@@ -1,4 +1,4 @@
-apiVersion: apps/v2
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: mywebeventappdevops
@@ -18,7 +18,7 @@ spec:
         ports:
         - containerPort: 8080
 
-apiVersion: v2
+apiVersion: v1
 kind: Service
 metadata: 
   name: mywebeventappdevops-service
@@ -31,13 +31,13 @@ spec:
     app: mywebeventappdevops
   type: LoadBalancer
 
-apiVersion: autoscaling/v2
+apiVersion: autoscaling/v1
 kind: HorizontalPodAutoscaler
 metadata:
   name: mywebeventappdevops-horizontalpodautoscaler
 spec:
   scaleTargetRef:
-    apiVersion: apps/v2
+    apiVersion: apps/v1
     kind: Deployment
     name: mywebeventappdevops
   minReplicas: 3
