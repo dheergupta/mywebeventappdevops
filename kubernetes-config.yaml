@@ -21,7 +21,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata: 
-  name: mywebeventappdevops
+  name: mywebeventappdevops-service
 spec: 
   ports: 
      -  port: 80
@@ -34,7 +34,7 @@ spec:
 apiVersion: autoscaling/v1
 kind: HorizontalPodAutoscaler
 metadata:
-  name: mywebeventappdevops
+  name: mywebeventappdevops-horizontalpodautoscaler
 spec:
   scaleTargetRef:
     apiVersion: apps/v1
